@@ -2,8 +2,10 @@ package com.maxidev.coffeeui.coffee.shopcart
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -16,6 +18,7 @@ import com.maxidev.coffeeui.R
 import com.maxidev.coffeeui.coffee.shopcart.components.ColumnOfContentCart
 import com.maxidev.coffeeui.coffee.shopcart.components.RowOfButtons
 import com.maxidev.coffeeui.coffee.shopcart.components.RowOfItemName
+import com.maxidev.coffeeui.coffee.shopcart.components.RowOfTotalPrice
 import com.maxidev.coffeeui.data.FakeShopCart
 
 @Composable
@@ -41,6 +44,8 @@ fun ShopCart(
         ColumnOfContentCart(
             theTriple = fakeShop.triples
         )
+        Spacer(modifier = Modifier.height(20.dp))
+        RowOfTotalPrice(totalPrice = R.string.total_price)
         RowOfButtons(
             textButtonBuy = R.string.buy,
             textButtonCancel = R.string.cancel

@@ -9,7 +9,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.maxidev.coffeeui.R
@@ -27,7 +26,7 @@ fun RowOfButtons(
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .padding(top = 200.dp),
+            .padding(top = 100.dp),
         horizontalArrangement = Arrangement.SpaceEvenly
     ) {
         SimpleButton(
