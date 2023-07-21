@@ -1,19 +1,18 @@
 package com.maxidev.coffeeui.coffee.components
 
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Coffee
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 
@@ -53,10 +52,16 @@ fun BottomNavigationBar(
                 icon = {
                     Icon(
                         imageVector = item.icons,
-                        contentDescription = null
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.onSurface
                     )
                 },
-                label = { Text(text = item.name) },
+                label = {
+                    Text(
+                        text = item.name,
+                        color = MaterialTheme.colorScheme.onSurface
+                    )
+                },
                 //alwaysShowLabel = false,
                 selected = selected,
                 onClick = {

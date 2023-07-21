@@ -28,11 +28,13 @@ fun SimpleButton(
             .height(50.dp)
             .width(120.dp),
         onClick = onClick,
-        elevation = ButtonDefaults.buttonElevation(6.dp)
+        elevation = ButtonDefaults.buttonElevation(6.dp),
+        colors = ButtonDefaults.buttonColors(MaterialTheme.colorScheme.primary)
     ) {
         Text(
             text = stringResource(id = text),
-            style = MaterialTheme.typography.bodySmall
+            style = MaterialTheme.typography.bodySmall,
+            color = MaterialTheme.colorScheme.onPrimary
         )
     }
 }

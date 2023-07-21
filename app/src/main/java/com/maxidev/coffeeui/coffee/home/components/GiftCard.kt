@@ -43,7 +43,8 @@ fun GiftCard(modifier: Modifier = Modifier) {
                 .fillMaxWidth()
                 .height(200.dp)
                 .padding(16.dp),
-            elevation = CardDefaults.cardElevation(6.dp)
+            elevation = CardDefaults.cardElevation(6.dp),
+            colors = CardDefaults.cardColors(MaterialTheme.colorScheme.surface)
         ) {
             Row(modifier = Modifier.fillMaxSize()) {
                 Spacer(modifier = Modifier.width(20.dp))
@@ -62,12 +63,14 @@ fun GiftCard(modifier: Modifier = Modifier) {
                 ) {
                     Text(
                         text = stringResource(id = R.string.donut),
-                        style = MaterialTheme.typography.bodyMedium
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurface
                     )
                     Text(
                         text = stringResource(id = R.string.buy_donut),
                         textAlign = TextAlign.Justify,
-                        style = MaterialTheme.typography.bodySmall
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurface
                     )
                 }
             }

@@ -52,7 +52,8 @@ fun GridOfMoreChoices(
             moreChoicesOfCoffeeOne.forEach { moreChoicesOne ->
                 Card(
                     modifier = Modifier.weight(1f),
-                    elevation = CardDefaults.cardElevation(6.dp)
+                    elevation = CardDefaults.cardElevation(6.dp),
+                    colors = CardDefaults.cardColors(MaterialTheme.colorScheme.surface)
                 ) {
                     Column(modifier = Modifier.fillMaxWidth()) {
                         Image(
@@ -68,12 +69,14 @@ fun GridOfMoreChoices(
                     ) {
                         Text(
                             text = stringResource(id = moreChoicesOne.second),
-                            style = MaterialTheme.typography.bodySmall
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurface
                         )
                         Spacer(modifier = Modifier.weight(1f))
                         Text(
                             text = stars,
-                            style = MaterialTheme.typography.bodySmall
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurface
                         )
                         Icon(
                             imageVector = Icons.Rounded.StarRate,
@@ -89,7 +92,8 @@ fun GridOfMoreChoices(
             moreChoicesOfCoffeeTwo.forEach { moreChoicesTwo ->
                 Card(
                     modifier = Modifier.weight(1f),
-                    elevation = CardDefaults.cardElevation(6.dp)
+                    elevation = CardDefaults.cardElevation(6.dp),
+                    colors = CardDefaults.cardColors(MaterialTheme.colorScheme.surface)
                 ) {
                     Column(modifier = Modifier.fillMaxWidth()) {
                         Image(
@@ -105,12 +109,14 @@ fun GridOfMoreChoices(
                     ) {
                         Text(
                             text = stringResource(id = moreChoicesTwo.second),
-                            style = MaterialTheme.typography.bodySmall
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurface
                         )
                         Spacer(modifier = Modifier.weight(1f))
                         Text(
                             text = stars,
-                            style = MaterialTheme.typography.bodySmall
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurface
                         )
                         Icon(
                             imageVector = Icons.Rounded.StarRate,

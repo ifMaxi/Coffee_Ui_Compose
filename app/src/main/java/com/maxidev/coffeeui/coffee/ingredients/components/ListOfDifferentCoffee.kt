@@ -37,7 +37,8 @@ fun ListOfDifferentCoffee(
                 .padding(8.dp)
                 .height(100.dp)
                 .clickable { clickableCard() },
-            elevation = CardDefaults.cardElevation(6.dp)
+            elevation = CardDefaults.cardElevation(6.dp),
+            colors = CardDefaults.cardColors(MaterialTheme.colorScheme.surface)
         ) {
             Row(
                 modifier = Modifier
@@ -57,7 +58,8 @@ fun ListOfDifferentCoffee(
                 Text(
                     modifier = Modifier.align(Alignment.CenterVertically),
                     text = stringResource(id = contentList.second),
-                    style = MaterialTheme.typography.titleMedium
+                    style = MaterialTheme.typography.titleMedium,
+                    color = MaterialTheme.colorScheme.onSurface
                 )
             }
         }
